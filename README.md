@@ -11,19 +11,15 @@
 ## Sonar Qube Report:
 	https://sonarcloud.io/summary/overall?id=fund-management
 	
-## Code Location:
-	Repository: https://tools.publicis.sapient.com/bitbucket/projects/JATL/repos/assignment-ravi/browse/fund-management?at=refs%2Fheads%2Fdev
-	Branch: dev
-	
 ## Postman Collection:
-	https://tools.publicis.sapient.com/bitbucket/projects/JATL/repos/assignment-ravi/browse/fund-management/src/main/resources/templates/Fund-Management.postman_collection.json?at=refs%2Fheads%2Fdev
+	fund-management/src/main/resources/templates/Fund-Management.postman_collection.json
 
 ## Architacture Overview:
 	
 ### Application contains three layer:
 		1. DOA layer
 		2. Service layer
-		3. Contraoller layer
+		3. Controller layer
 	
 ### Principle used:
 		1. Restfull service
