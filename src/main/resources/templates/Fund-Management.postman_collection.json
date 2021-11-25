@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "ea697046-ece1-45e7-a8af-3675574c9885",
+		"name": "Fund-Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Investor Node",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"node\": {\r\n        \"name\": \"Krishna\"\r\n    },\r\n    \"childNode\": {\r\n        \"name\": \"Sapient\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/node/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"node",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Fund with Holdings node and relationship",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"node\": {\r\n        \"name\": \"Sapient\"\r\n    },\r\n    \"childNode\": {\r\n        \"name\": \"Licence\",\r\n        \"value\": 10.2\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/node/2?quantity=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"node",
+						"2"
+					],
+					"query": [
+						{
+							"key": "quantity",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create only Holdings node",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJkZXBhcnRtZW50IjoiSVQiLCJpYXQiOjE2MzUzMTU2NjUsInN1YiI6InJhdmkiLCJpc3MiOiJWaW5zeXMiLCJleHAiOjE2MzUzMTc0NjV9.sQyE-kFgxUNd28hd7NSLGscukONaI1VG70PdnR341Ow",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"node\": {\r\n        \"name\": \"Electrice-Holdings\",\r\n        \"value\": 50.4\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/node/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"node",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Market Value for investor where exclusive holdings list given",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"ravi\",\r\n    \"password\":\"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/market-value/investor/Krishna?exclusive=ElectriceMotor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"market-value",
+						"investor",
+						"Krishna"
+					],
+					"query": [
+						{
+							"key": "exclusive",
+							"value": "ElectriceMotor"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Market Value for fund",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"ravi\",\r\n    \"password\":\"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/market-value/fund/HCL",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"market-value",
+						"fund",
+						"HCL"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

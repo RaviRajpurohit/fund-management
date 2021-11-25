@@ -1,0 +1,94 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.sapient</groupId>
+        <artifactId>fund-management</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>fund-management-dao</artifactId>
+    <name>fund-management-dao</name>
+    <description>DAO module</description>
+
+    <properties>
+        <neo4j-version>4.3.7</neo4j-version>
+        <project.version.1>4.1.12-SNAPSHOT</project.version.1>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.sapient</groupId>
+            <artifactId>fund-management-module</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.neo4j</groupId>
+            <artifactId>neo4j</artifactId>
+            <version>${neo4j-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.neo4j</groupId>
+            <artifactId>neo4j-graphdb-api</artifactId>
+            <version>${neo4j-version}</version>
+        </dependency>
+
+
+        <!--<dependency>
+        <groupId>com.neo4j</groupId>
+        <artifactId>neo4j-backup</artifactId>
+        <version>${neo4j.version}</version>
+        <scope>provided</scope>
+    </dependency>
+        <dependency>
+            <groupId>org.neo4j</groupId>
+            <artifactId>neo4j</artifactId>
+            <version>${neo4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.neo4j.doc</groupId>
+            <artifactId>neo4j-graphviz</artifactId>
+            <version>${project.version.1}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.neo4j.doc</groupId>
+            <artifactId>neo4j-doc-tools</artifactId>
+            <version>${project.version.1}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.neo4j.doc</groupId>
+            <artifactId>neo4j-cypher-prettifier</artifactId>
+            <version>${project.version.1}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.neo4j.doc</groupId>
+            <artifactId>test-framework</artifactId>
+            <version>${project.version.1}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.neo4j.test</groupId>
+            <artifactId>neo4j-harness</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+        </dependency>
+-->
+
+    </dependencies>
+
+</project>
